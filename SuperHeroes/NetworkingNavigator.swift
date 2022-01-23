@@ -32,15 +32,30 @@ class NetworkingNavigator {
             
             do {
                 let superheroes = try JSONDecoder().decode([Superhero].self, from: data)
-                complition(.success(superheroes))
+                DispatchQueue.main.async {
+                    complition(.success(superheroes))
+                }
+                
             } catch {
                 complition(.failure(NetError.decodingError))
                 
             }
-        }
+        }.resume()
         
     }
     
-//    func fetchImage(for url: String, complition: @escaping(Result< Data, NetError>) -> Void)
-//
+    func fetchImage(for url: URL, complition: @escaping(Result< Data, NetError>) -> Void) {
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data else {
+                complition(.failure(.noData))
+            return
+            }
+            DispatchQueue.main.async {
+                complition(.success(data))
+            }
+        } .resume()
+        
+        
+    }
+
 }

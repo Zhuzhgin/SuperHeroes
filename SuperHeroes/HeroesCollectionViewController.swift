@@ -7,31 +7,36 @@
 
 import UIKit
 
-private let reuseIdentifier = "superhero"
-
-private var superheroes: [Superhero] = []
-
-let numberOfItem: CGFloat = 2
-let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
 
 
 class HeroesCollectionViewController: UICollectionViewController {
 
+    private let reuseIdentifier = "superhero"
+
+    private var superheroes: [Superhero] = []
+
+    let numberOfItem: CGFloat = 2
+    let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getHeroes()
     
     }
 
  
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //superheroes.count
-        15
+        superheroes.count
+       
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
-       // let superhero = superheroes[indexPath.item]
+       let superhero = superheroes[indexPath.item]
+        let imageUrl = superhero.images.lg
+        cell.getImage(for: imageUrl)
+        
         cell.backgroundColor = .black
     
         return cell
@@ -39,7 +44,38 @@ class HeroesCollectionViewController: UICollectionViewController {
     
     
     
+    func getHeroes(){
+        NetworkingNavigator.shared.fetchData(for: "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json") { (result) in
+            switch result {
+            
+            case .success(let superheroes):
+                self.superheroes = superheroes
+                self.collectionView.reloadData()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        
+    }
     
+//    func getImage(for url: String) -> UIImage {
+//        guard let url = URL(string: url) else {return}
+//        var image: UIImage
+//        NetworkingNavigator.shared.fetchImage(for: url) { (result) in
+//            switch result {
+//
+//            case .success(let data):
+//                image = UIImage(data: data) ?? <#default value#>
+//
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//        return image
+//
+//    }
 
     // MARK: UICollectionViewDelegate
 
