@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		CAB2A553279D9810001B1C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A552279D9810001B1C40 /* AppDelegate.swift */; };
 		CAB2A555279D9810001B1C40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A554279D9810001B1C40 /* SceneDelegate.swift */; };
-		CAB2A557279D9810001B1C40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A556279D9810001B1C40 /* ViewController.swift */; };
 		CAB2A55A279D9810001B1C40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB2A558279D9810001B1C40 /* Main.storyboard */; };
 		CAB2A55C279D981D001B1C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB2A55B279D981D001B1C40 /* Assets.xcassets */; };
 		CAB2A55F279D981D001B1C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB2A55D279D981D001B1C40 /* LaunchScreen.storyboard */; };
+		CAB2A569279D98F2001B1C40 /* HeroesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A568279D98F2001B1C40 /* HeroesCollectionViewController.swift */; };
+		CAB2A56C279D9A56001B1C40 /* Superhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A56B279D9A56001B1C40 /* Superhero.swift */; };
+		CAB2A570279D9D58001B1C40 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A56F279D9D58001B1C40 /* CollectionViewCell.swift */; };
+		CAB2A573279DA875001B1C40 /* NetworkingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A572279DA875001B1C40 /* NetworkingNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAB2A54F279D9810001B1C40 /* SuperHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB2A552279D9810001B1C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB2A554279D9810001B1C40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAB2A556279D9810001B1C40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAB2A559279D9810001B1C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAB2A55B279D981D001B1C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB2A55E279D981D001B1C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB2A560279D981D001B1C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB2A568279D98F2001B1C40 /* HeroesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewController.swift; sourceTree = "<group>"; };
+		CAB2A56B279D9A56001B1C40 /* Superhero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Superhero.swift; sourceTree = "<group>"; };
+		CAB2A56F279D9D58001B1C40 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CAB2A572279DA875001B1C40 /* NetworkingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				CAB2A552279D9810001B1C40 /* AppDelegate.swift */,
+				CAB2A56B279D9A56001B1C40 /* Superhero.swift */,
 				CAB2A554279D9810001B1C40 /* SceneDelegate.swift */,
-				CAB2A556279D9810001B1C40 /* ViewController.swift */,
 				CAB2A558279D9810001B1C40 /* Main.storyboard */,
+				CAB2A56F279D9D58001B1C40 /* CollectionViewCell.swift */,
+				CAB2A568279D98F2001B1C40 /* HeroesCollectionViewController.swift */,
+				CAB2A572279DA875001B1C40 /* NetworkingNavigator.swift */,
 				CAB2A55B279D981D001B1C40 /* Assets.xcassets */,
 				CAB2A55D279D981D001B1C40 /* LaunchScreen.storyboard */,
 				CAB2A560279D981D001B1C40 /* Info.plist */,
@@ -137,9 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB2A557279D9810001B1C40 /* ViewController.swift in Sources */,
+				CAB2A570279D9D58001B1C40 /* CollectionViewCell.swift in Sources */,
+				CAB2A573279DA875001B1C40 /* NetworkingNavigator.swift in Sources */,
+				CAB2A569279D98F2001B1C40 /* HeroesCollectionViewController.swift in Sources */,
 				CAB2A553279D9810001B1C40 /* AppDelegate.swift in Sources */,
 				CAB2A555279D9810001B1C40 /* SceneDelegate.swift in Sources */,
+				CAB2A56C279D9A56001B1C40 /* Superhero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
