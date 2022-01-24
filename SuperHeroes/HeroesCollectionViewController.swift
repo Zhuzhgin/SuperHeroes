@@ -34,10 +34,12 @@ class HeroesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
        let superhero = superheroes[indexPath.item]
-        let imageUrl = superhero.images.lg
-        cell.getImage(for: imageUrl)
+        cell.configCell(superHero: superhero)
         
-        cell.backgroundColor = .black
+//        let imageUrl = superhero.images.lg
+//        cell.getImage(for: imageUrl)
+        
+       // cell.backgroundColor = .black
     
         return cell
     }

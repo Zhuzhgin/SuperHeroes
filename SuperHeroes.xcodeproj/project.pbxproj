@@ -16,6 +16,7 @@
 		CAB2A56C279D9A56001B1C40 /* Superhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A56B279D9A56001B1C40 /* Superhero.swift */; };
 		CAB2A570279D9D58001B1C40 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A56F279D9D58001B1C40 /* CollectionViewCell.swift */; };
 		CAB2A573279DA875001B1C40 /* NetworkingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A572279DA875001B1C40 /* NetworkingNavigator.swift */; };
+		CAB2A576279EECD3001B1C40 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB2A575279EECD3001B1C40 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CAB2A56B279D9A56001B1C40 /* Superhero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Superhero.swift; sourceTree = "<group>"; };
 		CAB2A56F279D9D58001B1C40 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CAB2A572279DA875001B1C40 /* NetworkingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingNavigator.swift; sourceTree = "<group>"; };
+		CAB2A575279EECD3001B1C40 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				CAB2A554279D9810001B1C40 /* SceneDelegate.swift */,
 				CAB2A558279D9810001B1C40 /* Main.storyboard */,
 				CAB2A56F279D9D58001B1C40 /* CollectionViewCell.swift */,
+				CAB2A575279EECD3001B1C40 /* ImageCache.swift */,
 				CAB2A568279D98F2001B1C40 /* HeroesCollectionViewController.swift */,
 				CAB2A572279DA875001B1C40 /* NetworkingNavigator.swift */,
 				CAB2A55B279D981D001B1C40 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				CAB2A569279D98F2001B1C40 /* HeroesCollectionViewController.swift in Sources */,
 				CAB2A553279D9810001B1C40 /* AppDelegate.swift in Sources */,
 				CAB2A555279D9810001B1C40 /* SceneDelegate.swift in Sources */,
+				CAB2A576279EECD3001B1C40 /* ImageCache.swift in Sources */,
 				CAB2A56C279D9A56001B1C40 /* Superhero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
